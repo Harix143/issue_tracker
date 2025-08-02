@@ -3,11 +3,14 @@ from .models import Issue
 from .serializers import IssueSerializer
 from projects.models import Project
 from common.permissions import ensure_project_member
+from rest_framework import viewsets, permissions
+from rest_framework import viewsets, permissions
+from .permissions import IsProjectMember
 
 
 class IssueViewSet(viewsets.ModelViewSet):
     serializer_class = IssueSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated, IsProjectMember]
 
     def get_queryset(self):
         # only issues in projects you belong to
