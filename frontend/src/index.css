@@ -1,0 +1,81 @@
+/* src/index.css */
+
+/* Color variables */
+:root {
+  --primary: #4a90e2;
+  --background: #f5f7fa;
+  --surface: #ffffff;
+  --text: #333333;
+  --error: #e74c3c;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+/* Layout */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Cards for grouping */
+.card {
+  background: var(--surface);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #357ab8;
+}
+
+/* Links */
+.link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Error text */
+.error {
+  color: var(--error);
+  margin-bottom: 1rem;
+}
