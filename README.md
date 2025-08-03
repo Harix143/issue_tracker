@@ -12,7 +12,7 @@ A simplified full-stack issue tracker (similar to GitHub Issues) built with Djan
 - **Frontend:** React (Create React App)  
 - **Database:** SQLite (default; easily swapped to Postgres/MySQL)  
 - **Containerization:** Docker, multi-stage Dockerfile, docker-compose  
-- **Deployment:** Render.com (or any Docker-friendly host)
+
 
 ---
 
@@ -135,7 +135,7 @@ docker-compose -f docker-compose.prod.yml exec web python manage.py migrate
 docker-compose -f docker-compose.prod.yml exec web python manage.py createsuperuser
 ```
 
-### 3. Access your app
+### 3. Access the app
 
 - **UI & API**: http://localhost:8000/  
 
@@ -143,19 +143,7 @@ Static files are served by WhiteNoise, API under **/api/**.
 
 ---
 
-## Deploying to Render.com
 
-1. Push the repo to GitHub.  
-2. On Render.com, create a **New → Web Service** and connect your GitHub repo.  
-3. Select **Docker** as the environment. Point to `backend/Dockerfile`.  
-4. Set environment variables:
-   - `SECRET_KEY`  
-   - `DEBUG=0`  
-   - `ALLOWED_HOSTS=*`  
-5. Render will build & deploy automatically.  
-6. In the Render shell, run migrations and create a superuser as above.
-
----
 
 ## Contributing
 
